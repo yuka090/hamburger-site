@@ -1,0 +1,21 @@
+@use "../../mixin" as *;
+@use "../../variable" as *;
+
+.p-mainvisual {
+    position: relative;
+
+    img {
+        height: 530px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    h2 {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        color: $white;
+        font-size: 2.5rem;
+        font-family: "M+ 1m";
+    }
+}

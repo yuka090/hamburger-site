@@ -1,0 +1,23 @@
+@use "../mixin" as *;
+
+.l-aside {
+    display: none;
+
+    //position: fixed;
+    //margin-bottom: 150px;
+    //height: 100%;
+    //top: 0;
+    //right: 0;
+    /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
+    //overflow-y: auto;
+    //z-index: 10;
+    @include breakpoint( pc ) {
+        display: block;
+        width: 19%;// ％に変更
+        padding: 2%;
+    
+
+
+    }
+
+}

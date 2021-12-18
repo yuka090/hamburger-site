@@ -1,0 +1,64 @@
+@use "../../mixin" as *;
+@use "../../variable" as *;
+
+.c-search {
+    //background-color: #6495ed;
+    display: flex;
+    //justify-content: space-around;
+    margin-right: 0;
+    font-size: 1rem;
+    //width: auto;
+    //background-color: rosybrown;
+    @include breakpoint( tablet ) {
+        margin-right: 2rem;
+    }
+
+
+    &__border {
+        border: solid 1px $grey;
+        position: relative;
+        display: flex;
+        margin-right: 1rem;
+        padding-left: 25px;
+        background-color: $white;
+        border-radius: 6px;
+        width: 230px;
+        @include breakpoint( tablet ) {
+            width: 370px;
+        }
+
+        &--glass {
+            color: $grey;
+            position: absolute;
+            top: 26%;
+            left: 2.5%;
+            font-size: 1.4rem;
+        }
+            
+        &--search {
+            //border: solid 1px #707070;
+            background-color: $white;
+            border-radius: 6px;
+            width: 100%;
+            margin-left: 13px;
+        }
+    }
+
+
+    &__submit {
+        border: solid 1px $grey;
+        background: linear-gradient(#F2EDE9,#DED8D3);
+        border-radius: 6px;
+        padding: 12px 23px;
+        font-size: 1rem;
+        color: $grey;
+        @include breakpoint( tablet ) {
+            padding: 12px 40px;
+        }
+    
+
+        &:active {
+            background: linear-gradient(#DED8D3,#d3ccc5);
+        }
+    }
+}

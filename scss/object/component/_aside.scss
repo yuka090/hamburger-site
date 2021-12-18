@@ -1,0 +1,38 @@
+@use "../../mixin" as *;
+@use "../../variable" as *;
+
+.c-aside {
+    background-color: #F2EDE9;
+    color: $grey;
+
+    &__title {
+        padding-top: 3%;
+        font-size: 2.1rem;
+    }
+
+    &__menu {
+        margin: 20% 0;
+
+        &--heading {
+            margin-bottom: 15%;
+            font-size: 1.5rem;
+            font-family: 'M+ 1m';
+        }
+
+        &--list {
+            margin-left: 1rem;
+            
+            li {
+                margin: 10% 0;
+
+                a{
+                    color: $grey;
+                    font-size: 1.25rem;
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}

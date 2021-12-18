@@ -1,0 +1,13 @@
+@use "../../mixin" as *;
+@use "../../variable" as *;
+
+.p-service {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 120px 0;
+    @include breakpoint( tablet ) {
+        flex-direction: row;
+        //padding: 2% 0 4%;
+    }
+}
