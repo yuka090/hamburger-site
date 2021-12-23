@@ -5,6 +5,8 @@ html {
 
 body {
   font-family: "M+ 1m";
+  overflow-x: hidden;
+  position: relative;
 }
 
 a {
@@ -31,25 +33,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .l-aside {
-  display: none;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  width: 328px;
+  padding: 9% 6%;
+  z-index: 30;
+  transition: all 400ms 0s ease;
   /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
+}
+@media (min-width: 600px) {
+  .l-aside {
+    width: 367px;
+  }
 }
 @media (min-width: 1040px) {
   .l-aside {
     display: block;
     width: 19%;
-    padding: 2%;
+    padding: 4% 2%;
+    z-index: 0;
+    right: 0;
   }
 }
 
-.l-main {
-  margin-right: 0;
-  width: 100%;
-}
-
-.l-container {
-  display: flex;
-  flex-direction: row-reverse;
+@media (min-width: 1040px) {
+  .l-main {
+    margin-right: 19%;
+  }
 }
 
 .c-footer {
@@ -91,9 +103,29 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #F2EDE9;
   color: #707070;
 }
+.c-aside__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+}
+@media (min-width: 1040px) {
+  .c-aside__close {
+    opacity: 0;
+  }
+}
+.c-aside__close:hover {
+  cursor: pointer;
+}
 .c-aside__title {
-  padding-top: 3%;
+  opacity: 0;
+  padding: 6% 0;
   font-size: 2.1rem;
+}
+@media (min-width: 1040px) {
+  .c-aside__title {
+    opacity: 1;
+  }
 }
 .c-aside__menu {
   margin: 20% 0;
@@ -121,12 +153,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #FFF7EF;
   padding: 5% 0 9%;
   height: 217px;
+  width: 100%;
   display: flex;
   align-items: center;
   color: #707070;
   position: relative;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media (min-width: 600px) {
   .c-header {
@@ -135,14 +168,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 1040px) {
   .c-header {
-    padding: 0 4%;
+    padding: 0 2%;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 .c-header__logo {
   font-size: 2.5rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1040px) {
   .c-header__logo {
     font-size: 4rem;
   }
@@ -170,11 +204,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   margin-right: 0;
   font-size: 1rem;
-}
-@media (min-width: 600px) {
-  .c-search {
-    margin-right: 2rem;
-  }
 }
 .c-search__border {
   border: solid 1px #707070;
@@ -240,6 +269,18 @@ h1, h2, h3, h4, h5, h6 {
 .c-white:active {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgba(60, 42, 16, 0.8);
+}
+
+.c-slideback {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  cursor: pointer;
 }
 
 .p-mainvisual {
@@ -363,6 +404,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .p-access__top p {
   line-height: 2.0625;
+}
+
+.p-open {
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
