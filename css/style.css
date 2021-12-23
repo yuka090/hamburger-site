@@ -32,32 +32,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.l-aside {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  right: -100%;
-  width: 328px;
-  padding: 9% 6%;
-  z-index: 30;
-  transition: all 400ms 0s ease;
-  /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
-}
-@media (min-width: 600px) {
-  .l-aside {
-    width: 367px;
-  }
-}
-@media (min-width: 1040px) {
-  .l-aside {
-    display: block;
-    width: 19%;
-    padding: 4% 2%;
-    z-index: 0;
-    right: 0;
-  }
-}
-
 @media (min-width: 1040px) {
   .l-main {
     margin-right: 19%;
@@ -102,6 +76,29 @@ h1, h2, h3, h4, h5, h6 {
 .c-aside {
   background-color: #F2EDE9;
   color: #707070;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  width: 328px;
+  padding: 9% 6%;
+  z-index: 30;
+  transition: all 400ms 0s ease;
+  /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
+}
+@media (min-width: 600px) {
+  .c-aside {
+    width: 367px;
+  }
+}
+@media (min-width: 1040px) {
+  .c-aside {
+    display: block;
+    width: 19%;
+    padding: 4% 2%;
+    z-index: 0;
+    right: 0;
+  }
 }
 .c-aside__close {
   position: absolute;
@@ -283,6 +280,10 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.c-open {
+  right: 0;
+}
+
 .p-mainvisual {
   position: relative;
 }
@@ -404,10 +405,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .p-access__top p {
   line-height: 2.0625;
-}
-
-.p-open {
-  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
