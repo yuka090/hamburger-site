@@ -2,17 +2,10 @@
 @use "../../variable" as *;
 
 .c-search {
-    //background-color: #6495ed;
     display: flex;
-    //justify-content: space-around;
     margin-right: 0;
     font-size: 1rem;
-    //width: auto;
     //background-color: rosybrown;
-    @include breakpoint( tablet ) {
-        margin-right: 2rem;
-    }
-
 
     &__border {
         border: solid 1px $grey;
@@ -44,7 +37,6 @@
         }
     }
 
-
     &__submit {
         border: solid 1px $grey;
         background: linear-gradient(#F2EDE9,#DED8D3);
@@ -56,7 +48,6 @@
             padding: 12px 40px;
         }
     
-
         &:active {
             background: linear-gradient(#DED8D3,#d3ccc5);
         }

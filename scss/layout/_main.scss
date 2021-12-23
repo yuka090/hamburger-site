@@ -1,4 +1,7 @@
+@use "../mixin" as *;
+
 .l-main {
-    margin-right: 0;//％に変更
-    width: 100%;
+    @include breakpoint( pc ) {
+        margin-right: 19%;//％に変更
+    }
 }

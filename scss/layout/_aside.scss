@@ -1,23 +1,24 @@
 @use "../mixin" as *;
 
 .l-aside {
-    display: none;
-
-    //position: fixed;
-    //margin-bottom: 150px;
-    //height: 100%;
-    //top: 0;
-    //right: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    width: 328px;
+    padding: 9% 6%;
+    z-index: 30;
+    transition: all 400ms 0s ease;
     /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
     //overflow-y: auto;
-    //z-index: 10;
+    @include breakpoint( tablet ) {
+        width: 367px;// ％に変更
+    }
     @include breakpoint( pc ) {
         display: block;
-        width: 19%;// ％に変更
-        padding: 2%;
-    
-
-
+        width: 19%;
+        padding:  4% 2%;
+        z-index: 0;
+        right: 0;
     }
-
 }

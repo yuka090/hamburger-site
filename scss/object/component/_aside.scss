@@ -5,9 +5,28 @@
     background-color: #F2EDE9;
     color: $grey;
 
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        @include breakpoint( pc ) {
+            //display: none;
+            opacity: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     &__title {
-        padding-top: 3%;
+        opacity: 0;
+        padding: 6% 0;
         font-size: 2.1rem;
+        @include breakpoint( pc ) {
+            opacity: 1;
+        }
     }
 
     &__menu {
