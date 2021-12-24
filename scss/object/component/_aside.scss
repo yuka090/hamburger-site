@@ -50,34 +50,30 @@
         }
     }
 
-    &__menu {
-        margin: 20% 0;
+    &__heading {
+        margin: 20% 0 15%;
+        font-size: 1.5rem;
+        font-family: 'M+ 1m';
+        @include breakpoint( pc ) {
+            font-size: 1.5vw;
+        }    
+    }
 
-        &--heading {
-            margin-bottom: 15%;
-            font-size: 1.5rem;
-            font-family: 'M+ 1m';
-            @include breakpoint( pc ) {
-                font-size: 1.5vw;
-            }    
-        }
+    &__list {
+        margin-left: 1rem;
+        
+        li {
+            margin: 10% 0;
 
-        &--list {
-            margin-left: 1rem;
-            
-            li {
-                margin: 10% 0;
-
-                a{
-                    color: $grey;
-                    font-size: 1.25rem;
-                    @include breakpoint( pc ) {
-                        font-size: 1.25vw;
-                    }
-            
-                    &:hover {
-                        opacity: 0.5;
-                    }
+            a{
+                color: $grey;
+                font-size: 1.25rem;
+                @include breakpoint( pc ) {
+                    font-size: 1.25vw;
+                }
+        
+                &:hover {
+                    opacity: 0.5;
                 }
             }
         }
