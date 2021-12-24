@@ -55,7 +55,8 @@
 
         &--heading {
             margin-bottom: 15%;
-            font-size: 1.5rem;
+            //font-size: 1.5rem;
+            font-size: 1.5vw;
             font-family: 'M+ 1m';
         }
 
@@ -67,7 +68,8 @@
 
                 a{
                     color: $grey;
-                    font-size: 1.25rem;
+                    //font-size: 1.25rem;
+                    font-size: 1.25vw;
                     &:hover {
                         opacity: 0.5;
                     }

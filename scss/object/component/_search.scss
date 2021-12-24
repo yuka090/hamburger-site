@@ -17,8 +17,13 @@
         border-radius: 6px;
         width: 230px;
         @include breakpoint( tablet ) {
-            width: 370px;
+            width: 396px;
         }
+        @include breakpoint( pc ) {
+            width: 30vw;
+            max-width: 396px;
+        }
+
 
         &--glass {
             color: $grey;
