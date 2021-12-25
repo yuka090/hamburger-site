@@ -1,9 +1,10 @@
-@use "../../mixin" as *;
-@use "../../variable" as *;
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
 
 .p-access {
     position: relative;
-    height: 77vh;
+    display: flex;
+    //height: 77vh;
     background-color: #000;
     @include breakpoint( tablet ) {
         height: 60vh;
@@ -13,7 +14,7 @@
     }    
 
     &__map {
-        //position: absolute;
+        position: absolute;
         //top: 0;
         //left: 0;
         width: 100%;
@@ -37,14 +38,14 @@
     }
 
     &__text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
+        flex-basis: 100%;
+        box-sizing: border-box;
+        z-index: 2;
+        //height: 100%;
         color: $white;
         padding: 5% 7%;
         @include breakpoint( pc ) {
-            width: 61%;
+            flex-basis: 61%;
         }    
 
         h4 {
