@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     jQuery(function($){
-        $('.c-header__menu').on('click',function(){
+        $('.p-header__menu').on('click',function(){
             $('.p-aside').toggleClass('is-open');
             $('.c-slideback').fadeIn();
             //alert('クリック');
         });
 
-        $('.c-aside__close').on('click',function(){
+        $('.p-aside__close').on('click',function(){
             $('.p-aside').removeClass('is-open');
             $('.c-slideback').fadeOut();
         });
