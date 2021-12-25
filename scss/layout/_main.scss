@@ -1,4 +1,4 @@
-@use "../mixin" as *;
+@use "../foundation/mixin" as *;
 
 .l-main {
     @include breakpoint( pc ) {
