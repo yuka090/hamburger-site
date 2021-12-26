@@ -1,3 +1,6 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
 .c-detail {
     background-color: rgb(255, 255, 255, 0.8);
     margin-bottom: 2.8%;
@@ -6,9 +9,12 @@
     color: #3C2A10;
 
     h4 {
-        font-size: 1.5rem;
+        font-size: 1.375rem;
         font-family: "M+ 1m";
         margin-bottom: 5%;
+        @include breakpoint( tablet ) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
