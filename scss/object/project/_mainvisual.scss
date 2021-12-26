@@ -5,17 +5,23 @@
     position: relative;
 
     img {
-        height: 530px;
+        height: 285px;
         object-fit: cover;
         width: 100%;
+        @include breakpoint( pc ) {
+            height: 530px;
+        }
     }
 
     h2 {
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 10%;
         color: $white;
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         font-family: "M+ 1m";
+        @include breakpoint( pc ) {
+            font-size: 2.5rem;
+        }
     }
 }
