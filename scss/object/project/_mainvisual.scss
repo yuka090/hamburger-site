@@ -2,21 +2,22 @@
 @use "../../foundation/variable" as *;
 
 .p-mainvisual {
-    display: flex;
-    background-color: olive;
-    background-image: url(../../../img/mainvisual-pc.jpg);
-    background-size: cover;
-    background-position: right center;
-    width: 100%;
-    height: 285px;
-    align-items: center;
-    padding: 5%;
-    color: $white;
-    @include breakpoint( pc ) {
-        height: 530px;
+    position: relative;
+
+    img {
+        height: 285px;
+        object-fit: cover;
+        width: 100%;
+        @include breakpoint( pc ) {
+            height: 530px;
+        }
     }
 
     h2 {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        color: $white;
         font-size: 2.2rem;
         font-family: "M+ 1m";
         @include breakpoint( pc ) {
