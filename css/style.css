@@ -322,23 +322,23 @@ body {
 }
 
 .p-mainvisual {
-  display: flex;
-  background-color: olive;
-  background-image: url(../../../img/mainvisual-pc.jpg);
-  background-size: cover;
-  background-position: right center;
-  width: 100%;
+  position: relative;
+}
+.p-mainvisual img {
   height: 285px;
-  align-items: center;
-  padding: 5%;
-  color: #fff;
+  object-fit: cover;
+  width: 100%;
 }
 @media (min-width: 1040px) {
-  .p-mainvisual {
+  .p-mainvisual img {
     height: 530px;
   }
 }
 .p-mainvisual h2 {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  color: #fff;
   font-size: 2.2rem;
   font-family: "M+ 1m";
 }
