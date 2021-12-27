@@ -30,6 +30,12 @@ body {
         right: 0;
     }
 
+    a {
+        color: $grey;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
 
     &__close {
         position: absolute;
@@ -61,7 +67,7 @@ body {
         font-family: 'M+ 1m';
         @include breakpoint( pc ) {
             font-size: 1.5vw;
-        }    
+        } 
     }
 
     &__list {
@@ -71,14 +77,9 @@ body {
             margin: 10% 0;
 
             a{
-                color: $grey;
                 font-size: 1.25rem;
                 @include breakpoint( pc ) {
                     font-size: 1.25vw;
-                }
-        
-                &:hover {
-                    opacity: 0.5;
                 }
             }
         }
