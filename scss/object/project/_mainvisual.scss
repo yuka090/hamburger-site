@@ -2,26 +2,73 @@
 @use "../../foundation/variable" as *;
 
 .p-mainvisual {
-    position: relative;
-
-    img {
-        height: 285px;
-        object-fit: cover;
-        width: 100%;
-        @include breakpoint( pc ) {
-            height: 530px;
-        }
+    display: flex;
+    background-color: olive;
+    background-image: url(../../../img/mainvisual-pc.jpg);
+    background-size: cover;
+    background-position: right center;
+    width: 100%;
+    height: 285px;
+    align-items: center;
+    padding: 5%;
+    color: $white;
+    @include breakpoint( pc ) {
+        height: 530px;
     }
 
     h2 {
-        position: absolute;
-        top: 45%;
-        left: 10%;
-        color: $white;
         font-size: 2.2rem;
         font-family: "M+ 1m";
         @include breakpoint( pc ) {
             font-size: 2.5rem;
+        }
+    }
+}
+
+.p-mainvisual--archive {
+    position: relative;
+    overflow: hidden;
+    height: 285px;
+    width: 500vw;
+    background-color: #000;
+    @include breakpoint( pc ) {
+        height: 239px;
+    }
+
+    img {
+        position: absolute;
+        margin-top: -600px;
+        margin-left: -300px;
+        width: 1600px;
+        height: 1600px;
+        opacity: 0.6;
+        @include breakpoint( pc ) {
+            margin-left: -50px;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        top: 38%;
+        left: 1%;
+        color: $white;
+        z-index: 3;
+        @include breakpoint( pc ) {
+            display: flex;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-family: Roboto;
+            padding-right: 10px;
+            @include breakpoint( pc ) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            padding-top: 10px;
         }
     }
 }
