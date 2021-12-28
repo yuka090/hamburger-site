@@ -7,7 +7,7 @@ $(document).ready(function() {
             //alert('クリック');
         });
 
-        $('.p-aside__close').on('click',function(){
+        $('.c-close').on('click',function(){
             $('.p-aside').removeClass('is-open');
             $('.c-slideback').fadeOut();
         });
