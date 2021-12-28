@@ -1,0 +1,54 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.c-card {
+    background-color: #3C2B1C;
+    color: $white;
+    min-height: 354px;
+    @include breakpoint( tablet ) {
+        display: flex;
+    }
+
+    &__img {
+        background-image: url(../../../img/card.png);
+        background-size: cover;
+        @include breakpoint( tablet ) {
+            width: auto;
+            max-width: 50%;
+            object-fit: none;
+            object-position: left;
+        }    
+    }
+
+    &__text {
+        padding: 3% 4% 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include breakpoint( tablet ) {
+            padding: 3% 4% 4%;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            padding: 2% 0;
+            //background-color: lightcoral;
+            @include breakpoint( pc ) {
+                font-size: 2.25rem;
+            }
+        }
+
+        h4 {
+            padding: 3% 0 2%;
+            //background-color: rgb(155, 245, 245);
+            @include breakpoint( pc ) {
+                font-size: 1.5rem;
+            }                    
+        }
+
+        p {
+            padding-right: 6%;
+            //background-color: lightseagreen;
+        }
+    }
+}

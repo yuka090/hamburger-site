@@ -1,0 +1,37 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.c-close {
+    top: -65px;
+    left: 260px;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        width: 35px;
+        height: 4px;
+        background: $grey;
+        position: absolute;
+        display: block;
+        top: 24px;
+        border-radius: 50px;
+    }
+    &::before {
+        transform: rotate( 45deg );
+    }
+    &::after {
+        transform: rotate( -45deg );
+    }
+    > span {
+        font-size: 0;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    @include breakpoint( pc ) {
+        //display: none;
+        opacity: 0;
+    }
+}
