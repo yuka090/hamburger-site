@@ -9,7 +9,7 @@
 
     &__border {
         border: solid 1px $grey;
-        position: relative;
+        //position: relative;
         display: flex;
         margin-right: 1rem;
         padding-left: 25px;
@@ -22,15 +22,6 @@
         @include breakpoint( pc ) {
             width: 30vw;
             max-width: 396px;
-        }
-
-
-        &--glass {
-            color: $grey;
-            position: absolute;
-            top: 26%;
-            left: 2.5%;
-            font-size: 1.4rem;
         }
             
         &--search {
