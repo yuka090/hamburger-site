@@ -20,6 +20,9 @@
 // Component
 // -----------------------------------------------------------------
 
+@use "object/component/button";
+@use "object/component/card";
+@use "object/component/close";
 @use "object/component/slideback";
 @use "object/component/detail";
 
@@ -28,6 +31,7 @@
 // -----------------------------------------------------------------
 
 @use "object/project/access";
+@use "object/project/archive";
 @use "object/project/aside";
 @use "object/project/footer";
 @use "object/project/header";
