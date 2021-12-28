@@ -37,21 +37,6 @@ body {
         }
     }
 
-    &__close {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 2rem;
-        @include breakpoint( pc ) {
-            //display: none;
-            opacity: 0;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
     &__title {
         opacity: 0;
         padding: 6% 0;
