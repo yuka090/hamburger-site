@@ -1,0 +1,65 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $grey;
+  font-family: Roboto;
+  
+
+  a {
+    color: $grey;
+  }
+
+  &__page {
+    display: none;
+    padding-right: 3%;
+    @include breakpoint( tablet ) {
+    display: block;
+    }    
+  }
+
+  &__prev,&__next a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1px;
+
+    p {
+      padding-right: 5px;
+      @include breakpoint( tablet ) {
+        display: none;
+      }        
+    }
+  }
+
+  &__prev a {
+    margin-top: -3px;
+    p {
+      padding-left: 30px;
+      margin-top: -7px;
+    }
+  }
+
+
+
+
+  //数字//
+  &__number a{
+    display: none;
+    @include breakpoint( tablet ) {
+      display: block;
+      background-color: $white;
+      border: solid 1px $grey;
+      padding: 6px 12px;
+      margin: 1%;
+
+      &:active {
+        color: $white;
+        background-color: $brown2;
+      }
+    }  
+  }
+}
