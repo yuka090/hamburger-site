@@ -1,17 +1,80 @@
 @use "../../foundation/mixin" as *;
 @use "../../foundation/variable" as *;
 
+//.c-button {
+    //display: block;
+    //background-color: $white;
+    //margin: 10% auto 0;
+    //padding: 3%;
+    //border-radius: 50px;
+    //width: 42%;
+    //max-width: 292px;
+    //max-height: 76px;
+    //min-width: 163px;
+    //color: $grey;
+    //font-weight: bold;
+    //text-align: center;
+
+    //&:active {
+        //background-color: #cfcac6;
+        //color: #646464;
+
+        //background-color: $grey;
+        //color: $white;
+
+        //font-size: 0.9rem;
+        //border: solid 3px $brown;
+    //}
+//}
+
 .c-button {
-    display: block;
-    background-color: $white;
-    margin: 10% auto 0;
-    padding: 3%;
-    border-radius: 50px;
-    width: 42%;
-    max-width: 292px;
-    max-height: 76px;
-    min-width: 163px;
-    color: $grey;
-    font-weight: bold;
-    text-align: center;
+	display: block;
+	width: 42%;
+	padding: 3%;
+	text-align: center;
+  margin:  auto;
+	color: $grey;
+	background: #fff;
+	border-radius: 30px;
+	-webkit-backface-visibility: hidden; 
+	-moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &:hover {
+        cursor: pointer;
+       -webkit-animation: c-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+       -moz-animation: c-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: c-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}
+
+@-webkit-keyframes c-button{
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+}
+@-moz-keyframes c-button{
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+}
+@keyframes c-button {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
 }
