@@ -30,21 +30,105 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.c-button {
-  display: block;
-  background-color: #fff;
-  margin: 10% auto 0;
-  padding: 3%;
-  border-radius: 50px;
-  width: 42%;
-  max-width: 292px;
-  max-height: 76px;
-  min-width: 163px;
-  color: #707070;
-  font-weight: bold;
-  text-align: center;
+.l-pagination {
+  margin: 4%;
+}
+@media (min-width: 600px) {
+  .l-pagination {
+    margin: 4% auto;
+    max-width: 580px;
+  }
 }
 
+.c-arrow--left {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  padding: 5px;
+}
+.c-arrow--left:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-top: solid 1px #707070;
+  border-left: solid 1px #707070;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+  transform: rotate(-45deg);
+}
+.c-arrow--right {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  padding: 5px;
+}
+.c-arrow--right:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-top: solid 1px #707070;
+  border-right: solid 1px #707070;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  margin-top: -7px;
+  transform: rotate(45deg);
+}
+
+.c-button {
+  display: block;
+  width: 42%;
+  padding: 3%;
+  text-align: center;
+  margin: auto;
+  color: #707070;
+  background: #fff;
+  border-radius: 30px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.c-button:hover {
+  cursor: pointer;
+  -webkit-animation: c-button 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -moz-animation: c-button 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: c-button 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes c-button {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+}
+@-moz-keyframes c-button {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+}
+@keyframes c-button {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+}
 .c-card {
   background-color: #3C2B1C;
   color: #fff;
@@ -56,15 +140,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .c-card__img {
-  background-image: url(../../../img/card.png);
-  background-size: cover;
+  background-color: olive;
 }
 @media (min-width: 600px) {
   .c-card__img {
-    width: auto;
     max-width: 50%;
-    object-fit: none;
-    object-position: left;
+    object-fit: cover;
   }
 }
 .c-card__text {
@@ -516,7 +597,6 @@ body {
   margin-top: -600px;
   margin-left: -300px;
   width: 1600px;
-  height: 1600px;
   opacity: 0.6;
 }
 @media (min-width: 1040px) {
@@ -549,6 +629,63 @@ body {
 }
 .p-mainvisual--archive__text p {
   padding-top: 10px;
+}
+
+.p-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #707070;
+  font-family: Roboto;
+}
+.p-pagination a {
+  color: #707070;
+}
+.p-pagination__page {
+  display: none;
+  padding-right: 3%;
+}
+@media (min-width: 600px) {
+  .p-pagination__page {
+    display: block;
+  }
+}
+.p-pagination__prev, .p-pagination__next a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1px;
+}
+.p-pagination__prev p, .p-pagination__next a p {
+  padding-right: 5px;
+}
+@media (min-width: 600px) {
+  .p-pagination__prev p, .p-pagination__next a p {
+    display: none;
+  }
+}
+.p-pagination__prev a {
+  margin-top: -3px;
+}
+.p-pagination__prev a p {
+  padding-left: 30px;
+  margin-top: -7px;
+}
+.p-pagination__number a {
+  display: none;
+}
+@media (min-width: 600px) {
+  .p-pagination__number a {
+    display: block;
+    background-color: #fff;
+    border: solid 1px #707070;
+    padding: 6px 12px;
+    margin: 1%;
+  }
+  .p-pagination__number a:active {
+    color: #fff;
+    background-color: #3C2B1C;
+  }
 }
 
 .p-search {
@@ -682,6 +819,10 @@ body {
 
 .u-margin2 {
   margin-bottom: 3%;
+}
+
+.u-margin3 {
+  margin-top: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
