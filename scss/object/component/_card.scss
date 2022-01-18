@@ -2,7 +2,7 @@
 @use "../../foundation/variable" as *;
 
 .c-card {
-    background-color: #3C2B1C;
+    background-color: $brown2;
     color: $white;
     min-height: 354px;
     @include breakpoint( tablet ) {
@@ -10,13 +10,13 @@
     }
 
     &__img {
-        background-image: url(../../../img/card.png);
-        background-size: cover;
+        //background-image: url(../../../img/card.png);
+        //background-size: cover;
+        background-color: olive;
         @include breakpoint( tablet ) {
-            width: auto;
             max-width: 50%;
-            object-fit: none;
-            object-position: left;
+            object-fit: cover;//none
+            //object-position: left;    
         }    
     }
 
@@ -32,7 +32,6 @@
         h3 {
             font-size: 1.25rem;
             padding: 2% 0;
-            //background-color: lightcoral;
             @include breakpoint( pc ) {
                 font-size: 2.25rem;
             }
@@ -40,7 +39,6 @@
 
         h4 {
             padding: 3% 0 2%;
-            //background-color: rgb(155, 245, 245);
             @include breakpoint( pc ) {
                 font-size: 1.5rem;
             }                    
@@ -48,7 +46,6 @@
 
         p {
             padding-right: 6%;
-            //background-color: lightseagreen;
         }
     }
 }
