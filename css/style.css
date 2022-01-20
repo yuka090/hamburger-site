@@ -576,7 +576,7 @@ body {
 }
 @media (min-width: 1040px) {
   .p-mainvisual h2 {
-    font-size: 2.5rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -619,16 +619,55 @@ body {
 }
 .p-mainvisual--archive__text h2 {
   font-size: 2.2rem;
-  font-family: Roboto;
   padding-right: 10px;
 }
-@media (min-width: 1040px) {
+@media (min-width: 600px) {
   .p-mainvisual--archive__text h2 {
-    font-size: 2.5rem;
+    font-size: 3.75rem;
   }
 }
 .p-mainvisual--archive__text p {
   padding-top: 10px;
+}
+
+.p-mainvisual--single {
+  position: relative;
+  height: 225px;
+  overflow: hidden;
+  width: 300vw;
+}
+@media (min-width: 600px) {
+  .p-mainvisual--single {
+    height: 500px;
+  }
+}
+.p-mainvisual--single__img {
+  position: absolute;
+  margin-top: -920px;
+  margin-left: -150px;
+  width: 700px;
+}
+@media (min-width: 600px) {
+  .p-mainvisual--single__img {
+    margin-top: -2100px;
+    margin-left: 0;
+    width: auto;
+  }
+}
+.p-mainvisual--single h1 {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  color: #fff;
+  z-index: 3;
+  font-size: 2.2rem;
+  font-family: "M+ 1m";
+  padding-right: 10px;
+}
+@media (min-width: 600px) {
+  .p-mainvisual--single h1 {
+    font-size: 3.75rem;
+  }
 }
 
 .p-pagination {
@@ -754,7 +793,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: olive;
-  background-image: url(../../../img/takeout.png);
+  background-image: url(../../../img/index-takeout.png);
   background-size: cover;
   min-height: 80vh;
 }
@@ -770,7 +809,7 @@ body {
   }
 }
 .p-service__section:nth-child(2) {
-  background-image: url(../../../img/eatin.png);
+  background-image: url(../../../img/index-eatin.png);
 }
 .p-service__section--title {
   color: #fff;
