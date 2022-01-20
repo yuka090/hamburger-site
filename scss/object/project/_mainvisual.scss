@@ -21,7 +21,7 @@
         font-size: 2.2rem;
         font-family: "M+ 1m";
         @include breakpoint( pc ) {
-            font-size: 2.5rem;
+            font-size: 3.75rem;
         }
     }
 }
@@ -60,15 +60,50 @@
 
         h2 {
             font-size: 2.2rem;
-            font-family: Roboto;
             padding-right: 10px;
-            @include breakpoint( pc ) {
-                font-size: 2.5rem;
+            @include breakpoint( tablet ) {
+                font-size: 3.75rem;
             }
         }
 
         p {
             padding-top: 10px;
+        }
+    }
+}
+
+.p-mainvisual--single {
+    position: relative;
+    height: 225px;
+    overflow: hidden;
+    width: 300vw;
+    @include breakpoint( tablet ) {
+        height: 500px;
+    }
+
+    &__img {
+        position: absolute;
+        margin-top: -920px;
+        margin-left: -150px;
+        width: 700px;
+        @include breakpoint( tablet ) {
+            margin-top: -2100px;
+            margin-left: 0;
+            width: auto;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 45%;
+        left: 1%;
+        color: $white;
+        z-index: 3;
+        font-size: 2.2rem;
+        font-family: "M+ 1m";
+        padding-right: 10px;
+        @include breakpoint( tablet ) {
+            font-size: 3.75rem;
         }
     }
 }

@@ -17,7 +17,7 @@
         flex-direction: column;
         justify-content: space-between;
         background-color: olive;
-        background-image: url(../../../img/takeout.png);
+        background-image: url(../../../img/index-takeout.png);
         background-size: cover;
         min-height: 80vh;
         @include breakpoint( tablet ) {
@@ -29,7 +29,7 @@
         } 
 
         &:nth-child(2) {
-            background-image: url(../../../img/eatin.png);
+            background-image: url(../../../img/index-eatin.png);
         }
     
         &--title {
