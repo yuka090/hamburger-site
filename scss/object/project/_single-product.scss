@@ -1,0 +1,18 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-single-product {
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 0;
+    color: $brown;
+
+    img {
+        width: 45%;
+        max-height: 150px;
+        object-fit: cover;
+        @include breakpoint( tablet ) {
+            max-height: none;
+        }    
+    }
+}

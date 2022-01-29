@@ -1,0 +1,34 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-list {
+    padding: 3% 0;
+    color: $brown;
+
+    &__with-number {
+        padding: 1.2rem 0;
+
+        &__unit {
+            padding: 0.7rem 0;
+            &:nth-child(2) {
+                padding-left: 2rem;
+            }    
+        }
+
+        li {
+            list-style: inherit;
+            list-style-position: inside;
+        }
+    }
+
+    &__without-number {
+        padding: 1.2rem 0;
+
+        &__unit {
+            padding: 0.7rem 0;
+            &:nth-child(2) {
+                padding-left: 2rem;
+            }    
+        }
+    }
+}

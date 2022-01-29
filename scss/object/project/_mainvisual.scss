@@ -107,3 +107,29 @@
         }
     }
 }
+
+.p-mainvisual--shop {
+    position: relative;
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        @include breakpoint( tablet ) {
+            height: 500px;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 45%;
+        left: 1%;
+        color: $white;
+        z-index: 3;
+        font-size: 2.2rem;
+        font-family: "M+ 1m";
+        padding-right: 10px;
+        @include breakpoint( tablet ) {
+            font-size: 3.75rem;
+        }
+    }
+}

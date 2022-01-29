@@ -1,0 +1,40 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-single-images {
+    overflow: hidden;
+    img {
+        object-fit: cover;
+    }
+
+    &__top-img {
+        width: 100%;
+        margin-top: -25%;
+    }
+
+    &__middle-img {
+        margin: 5% auto;
+        display: block;
+        width: 80%;
+    }
+
+    &__flex {
+        padding-top: 2%;
+        @include breakpoint( tablet ) {
+            padding-top: 20%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px 20px;
+        }
+        @include breakpoint( pc ) {
+            padding-top: 5%;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        a{
+            &:hover {
+                opacity: 0.8;
+            }    
+        }
+    }
+}

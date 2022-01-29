@@ -36,45 +36,12 @@
 	color: $grey;
 	background: #fff;
 	border-radius: 30px;
-	-webkit-backface-visibility: hidden; 
-	-moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+	//-webkit-backface-visibility: hidden; 
+	//-moz-backface-visibility: hidden;
+  //backface-visibility: hidden;
 
-    &:hover {
-        cursor: pointer;
-       -webkit-animation: c-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-       -moz-animation: c-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: c-button 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-@-webkit-keyframes c-button{
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-  }
-}
-@-moz-keyframes c-button{
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-  }
-}
-@keyframes c-button {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-  }
-}

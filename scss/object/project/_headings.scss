@@ -1,0 +1,16 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-headings {
+    color: $brown;
+    
+    h3 {
+        font-size: 1.5rem;
+        padding-bottom: 1.2%;
+    }
+
+    h4,h5,h6 {
+        font-size: 1.25rem;
+        padding: 1.2% 0;
+    }
+}

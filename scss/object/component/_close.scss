@@ -2,8 +2,8 @@
 @use "../../foundation/variable" as *;
 
 .c-close {
-    top: -65px;
-    left: 260px;
+    top: 1px;
+    left: 88%;
     width: 45px;
     height: 45px;
     position: relative;
@@ -29,6 +29,9 @@
     }
     &:hover {
         cursor: pointer;
+    }
+    @include breakpoint( tablet ) {
+        top: -30px;
     }
     @include breakpoint( pc ) {
         //display: none;

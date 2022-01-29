@@ -1,0 +1,16 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-quote {
+    background-color: #f5f5f5;
+    padding: 30px 3%;
+    color: $brown;
+
+    p {
+        padding: 15px 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

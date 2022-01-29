@@ -32,20 +32,4 @@
             margin-left: 13px;
         }
     }
-
-    &__submit {
-        border: solid 1px $grey;
-        background: linear-gradient(#F2EDE9,#DED8D3);
-        border-radius: 6px;
-        padding: 12px 23px;
-        font-size: 1rem;
-        color: $grey;
-        @include breakpoint( tablet ) {
-            padding: 12px 40px;
-        }
-    
-        &:active {
-            background: linear-gradient(#DED8D3,#d3ccc5);
-        }
-    }
 }
